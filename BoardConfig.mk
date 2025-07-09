@@ -71,7 +71,7 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/fs/config.fs
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/mmi_charging_enable
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
