@@ -82,7 +82,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_x3
+(call soong_config_set,libinit,vendor_init_lib,libinit_x3)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_x3
 
 # Kernel
